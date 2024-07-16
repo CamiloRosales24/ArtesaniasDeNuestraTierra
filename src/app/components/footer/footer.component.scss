@@ -1,0 +1,55 @@
+
+body{
+    background-color: #000000;
+    ;
+}
+
+.imagen{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000000;
+    hr{
+        height: 4px;
+        color: #FFFFFF;
+        width: 39%;
+        margin: 1.5em 0.3em;
+    }
+    img{
+        margin: 0 0.3em;
+        min-width: 50px;
+        width: 5%;
+        
+    }
+}
+
+.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 2em;
+    background-color: #000000;
+    .item-contacto{
+        width: 28%;
+        display: flex;
+        flex-wrap: wrap;
+        color: #FFFFFF;
+        margin: 1em 0.5em;
+        .titulo-item-contacto{
+            font-size: 0.5em;
+            width: 90%;
+        }
+        .info-item-contacto{
+            font-size: 0.5em;
+            width: 90%;
+        }
+    }
+}
+
+.copyright{
+    background-color: #FFFFFF;
+    align-items: center;
+    p{
+        font-size: 0.6em;
+        text-align: center;
+    }
+}

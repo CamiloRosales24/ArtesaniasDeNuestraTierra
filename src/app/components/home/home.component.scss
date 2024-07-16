@@ -1,0 +1,39 @@
+
+.banner{
+    margin-top: -5px;
+    position: relative;
+}
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    top: 100px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.titulo{
+    width: 90%;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.subtitulo{
+    width: 90%;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 0.6em;
+    font-weight: bold;
+}
