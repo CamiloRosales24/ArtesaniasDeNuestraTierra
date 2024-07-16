@@ -8,10 +8,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PublicationComponent } from './components/publication/publication.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { SliderComponent } from './components/slider/slider.component';
-import { NewsComponent } from './components/news/news.component';
-import { EventsComponent } from './components/events/events.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TradicionComponent } from './components/tradicion/tradicion.component';
+import { ArtesanosComponent } from './components/artesanos/artesanos.component';
+import { MuestraUnoComponent } from './components/muestra-uno/muestra-uno.component';
+import { MuestraDosComponent } from './components/muestra-dos/muestra-dos.component';
+import { MuestraTresComponent } from './components/muestra-tres/muestra-tres.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { FooterComponent } from './components/footer/footer.component';
     RegisterComponent,
     PublicationComponent,
     NavbarComponent,
-    SliderComponent,
-    NewsComponent,
-    EventsComponent,
-    FooterComponent
+    FooterComponent,
+    TradicionComponent,
+    ArtesanosComponent,
+    MuestraUnoComponent,
+    MuestraDosComponent,
+    MuestraTresComponent
   ],
   imports: [
     BrowserModule,

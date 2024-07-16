@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventsComponent } from './events.component';
+import { MuestraUnoComponent } from './muestra-uno.component';
 
-describe('EventsComponent', () => {
-  let component: EventsComponent;
-  let fixture: ComponentFixture<EventsComponent>;
+describe('MuestraUnoComponent', () => {
+  let component: MuestraUnoComponent;
+  let fixture: ComponentFixture<MuestraUnoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventsComponent ]
+      declarations: [ MuestraUnoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EventsComponent);
+    fixture = TestBed.createComponent(MuestraUnoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

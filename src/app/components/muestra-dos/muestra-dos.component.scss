@@ -1,0 +1,27 @@
+.container{
+    width: 100%;
+    margin: 1rem 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    section{
+        width: 19%;
+        margin: 0px 0.5rem;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        img{
+            width: 6rem;
+            object-fit: cover;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            font-size: 0.5rem;
+            color: white;
+        }
+        
+    }
+}
