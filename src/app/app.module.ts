@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { ArtesanosComponent } from './components/artesanos/artesanos.component';
 import { MuestraUnoComponent } from './components/muestra-uno/muestra-uno.component';
 import { MuestraDosComponent } from './components/muestra-dos/muestra-dos.component';
 import { MuestraTresComponent } from './components/muestra-tres/muestra-tres.component';
+import { ArtesanoComponent } from './components/artesano/artesano.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,14 @@ import { MuestraTresComponent } from './components/muestra-tres/muestra-tres.com
     ArtesanosComponent,
     MuestraUnoComponent,
     MuestraDosComponent,
-    MuestraTresComponent
+    MuestraTresComponent,
+    ArtesanoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

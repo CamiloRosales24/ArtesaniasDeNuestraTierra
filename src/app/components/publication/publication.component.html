@@ -1,1 +1,99 @@
-<p>publication works!</p>
+<app-navbar></app-navbar>
+
+<div class="banner">
+    <img src="../assets/imagenes/Rectangle 8b.png" alt="">
+    <h1 class="titulo">CARGUE DE PRODUCTOS</h1>
+    <h1 class="subtitulo">CADA PRODUCTO ELABORADO CON MATERIALES DE NUESTRA TIERRA</h1>
+</div>
+<div class="container">
+    <div class="imagen">
+        <p>
+            Bienvenido a nuestra plataforma Artesanias de Nuestra Tierra.
+
+            Aquí podrás cargar tus productos y mostrarlos a una amplia audiencia interesada en artesanías únicas y de alta calidad.
+
+            Completa el formulario de carga de productos con los detalles de cada creación, incluyendo nombre, categoría y una descripción detallada
+
+            ¡Comienza a promocionar tus artesanías hoy y comparte tu talento con el mundo!
+        </p>
+    </div>
+    <div class="formulario">
+        <form [formGroup]="formPublicacion" (ngSubmit)="guardar()">
+            <h1>CARGUE SUS PRODUCTOS</h1>
+            <div class="entradas">
+                <label>Nombre del Producto</label>
+                <input type="text"
+                        formControlName="nameProduct">
+                <div *ngFor="let error of errorMensaje.nameProduct">
+                    <ng-container *ngIf="nameProduct.hasError(error.type) && (nameProduct.dirty || nameProduct.touched)">
+                        <small class="error-message">{{error.message}}</small>
+                    </ng-container>                    
+                </div>
+            </div>
+            <div class="entradas">
+                <label for="">Categoría</label>
+                <select formControlName="category" placeholder="Seleccionar">
+                    <option selected disabled value="" > Seleccionar...</option>
+                    <option *ngFor="let categoria of categorias" value="{{categoria._id}}">{{categoria.nombre_categoria}}</option>
+                </select>
+                <div *ngFor="let error of errorMensaje.category">
+                    <ng-container *ngIf="category.hasError(error.type) && (category.dirty || category.touched)">
+                        <small class="error-message">{{error.message}}</small>
+                    </ng-container>                    
+                </div>
+            </div>
+            <div class="entradas">
+                <label>Descripción</label>
+                <input type="text"
+                        formControlName="description">
+                <div *ngFor="let error of errorMensaje.description">
+                    <ng-container *ngIf="description.hasError(error.type) && (description.dirty || description.touched)">
+                        <small class="error-message">{{error.message}}</small>
+                    </ng-container>                    
+                </div>
+            </div>
+            <div class="entradas">
+                <label for="">Departamento</label>
+                <select formControlName="department" placeholder="Seleccionar">
+                    <option selected disabled value="" > Seleccionar...</option>
+                    <option *ngFor="let depto of departamentos" value="{{depto._id}}">{{depto.nombre_depto}}</option>
+                </select>
+                <div *ngFor="let error of errorMensaje.department">
+                    <ng-container *ngIf="department.hasError(error.type) && (department.dirty || department.touched)">
+                        <small class="error-message">{{error.message}}</small>
+                    </ng-container>                    
+                </div>
+            </div>
+            <div class="entradas">
+                <label for="">Municipio</label>
+                <select formControlName="municipality" placeholder="Seleccionar">
+                    <option selected disabled value="" > Seleccionar...</option>
+                    <option *ngFor="let municipio of municipios" value="{{municipio._id}}">{{municipio.nombre_municipio}}</option>
+                </select>
+                <div *ngFor="let error of errorMensaje.municipality">
+                    <ng-container *ngIf="municipality.hasError(error.type) && (municipality.dirty || municipality.touched)">
+                        <small class="error-message">{{error.message}}</small>
+                    </ng-container>                    
+                </div>
+            </div>
+            <div class="entradas">
+                <label for="">Adjuntar Foto (JPG, PNG)</label>
+                <input type="file"
+                        formControlName="photoFile"
+                        (change)="capturaFile($event)">
+                <!-- <div *ngFor="let error of errorMensaje.photoFile">
+                    <ng-container *ngIf="photoFile.hasError(error.type) && (photoFile.dirty || photoFile.touched)">
+                        <small class="error-message">{{error.message}}</small>
+                    </ng-container>                    
+                </div> -->
+            </div>
+            <div *ngIf="previsualizador" class="previsualizacion" >
+                <img [src]="previsualizador" alt="">
+            </div>
+            <button type="submit">ENVIAR</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <app-footer></app-footer>
+</footer>
