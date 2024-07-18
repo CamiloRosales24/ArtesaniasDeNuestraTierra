@@ -1,6 +1,6 @@
-<div class="container" >
+<div>
     <section *ngFor="let artesano of listaArtesanos" (click)="verDetalle(artesano.id)">
         <img [src]="artesano.image" alt="" >
-        <h1>{{artesano.nameArtesano}}</h1>
+        <h1>{{artesano.name}}</h1>
     </section  >
 </div>

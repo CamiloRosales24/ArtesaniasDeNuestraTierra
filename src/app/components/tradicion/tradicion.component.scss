@@ -5,6 +5,7 @@ div{
     display: inline-block;
     text-align: center;
     margin: 1rem 0px;
+    width: 100%;
 }
 
 img{
@@ -26,8 +27,6 @@ section{
     transform: translate(-50%, -50%);
     article{
         padding: 0.5em;
-        position: relative;
-        display: inline-block;
         text-align: center;
         h2{
             font-size: 0.9em;
@@ -35,25 +34,64 @@ section{
         }
         p{
             font-size: 0.7rem;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            //font-size: 15px;
             font-weight: 400;
             line-height: 18.29px;
             text-align: left;
         }
+    }
+}
 
-        button{
-            position: absolute;
-            top: 87%;
-            left: 20%;
-            transform: translate(-50%, -50%);
-            height: auto;
-            font-size: 0.7rem;
+.parrafo2, .parrafo3{
+    visibility: hidden;
+    height: 0px;
+}
+
+@media only screen and (min-width: 500px) {
+    img{
+        height: 200px;
+    }
+    section{
+        article{
+            h2{
+                font-size: 1em;
+                margin: 1rem 0px;
+            }
+            p{
+                font-size: 0.9rem;
+                font-weight: 400;
+            }
         }
     }
 }
 
-.parrafo2{
-    visibility: hidden;
-    height: 0px;
+@media only screen and (min-width: 700px) {
+    img{
+        height: 350px;
+        width: 100%;
+    }
+    section{
+        article{
+            h2{
+                font-size: 1.4rem;
+                margin: 0.5rem 0px;
+            }
+            p{
+                font-size: 0.85rem;
+            }
+        }
+    }
+    .parrafo2, .parrafo3{
+        visibility: visible;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    section{
+        article{
+            h2{
+                margin: 2rem 0px;
+            }
+        }
+    }
 }

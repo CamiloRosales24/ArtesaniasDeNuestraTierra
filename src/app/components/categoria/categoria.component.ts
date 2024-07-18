@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
-  selector: 'app-artesano',
-  templateUrl: './artesano.component.html',
-  styleUrls: ['./artesano.component.scss']
+  selector: 'app-categoria',
+  templateUrl: './categoria.component.html',
+  styleUrls: ['./categoria.component.scss']
 })
-export class ArtesanoComponent {
+export class CategoriaComponent {
 
-  artesano: any;
-  idArtesano: any;
+  categoria: any;
+  idCategoria: any;
 
   constructor(
     private router: Router,
@@ -18,13 +18,13 @@ export class ArtesanoComponent {
     private activatedRoute: ActivatedRoute,
   ) {
     this.activatedRoute.params.subscribe((params: any)=>{  
-      this.idArtesano =  params.id   
+      this.idCategoria =  params.id   
     })
    }
 
   ngOnInit() {
-    this.artesano = this.generalService.verArtesano(this.idArtesano);
-    console.log(this.artesano);    
+    this.categoria = this.generalService.verCategoria(this.idCategoria);
+    console.log(this.categoria);    
   }
 
   regresar(){

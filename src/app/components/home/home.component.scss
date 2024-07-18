@@ -12,7 +12,7 @@ img{
     opacity: 0px;
 }
 
-.titulo{
+.titulo, .subtitulo{
     width: 90%;
     color: #FFFFFF;
     text-align: center;
@@ -25,15 +25,41 @@ img{
     font-weight: bold;
 }
 
+.titulo{
+    top: 40%;
+    font-size: 1.5em;
+}
+
 .subtitulo{
-    width: 90%;
-    color: #FFFFFF;
-    text-align: center;
-    position: absolute;
-    z-index: 1500;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
     font-size: 0.6em;
-    font-weight: bold;
+}
+
+@media only screen and (min-width: 500px){
+    img{
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    img{
+        width: 100%;
+        height: 300px;
+    }
+    .titulo{
+        font-size: 3em;
+    }
+    
+    .subtitulo{
+        top: 50%;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    img{
+        width: 100%;
+        height: 350px;
+    }
 }

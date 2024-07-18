@@ -1,24 +1,8 @@
-<div class="container">
-    <section>
-        <img src="../assets/imagenes/Rectangle 14.png" alt="">
-        <h1>TEJIDO DE 
-            MIMBRE</h1>
-    </section>
-    <section>
-        <img src="../assets/imagenes/Rectangle 22.png" alt="">
-        <h1>TEJIDOS LANA
-            DE OVEJA</h1>
-    </section>
-    <section>
-        <img src="../assets/imagenes/Rectangle 15.png" alt="">
-        <h1>TALLA EN 
-            MADERA</h1>
-    </section>
-    <section>
-        <img src="../assets/imagenes/Rectangle 16.png" alt="">
-        <h1>FIGURAS DE 
-            BARRO</h1>
-    </section>
+<div>
+    <section *ngFor="let categoria of listaCategorias" (click)="verDetalle(categoria.id)">
+        <img [src]="categoria.image" alt="" >
+        <h1>{{categoria.name}}</h1>
+    </section  >
 </div>
 
 

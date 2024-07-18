@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="banner">
+    <img [src]="categoria.image1" alt="">
+    <h1 class="titulo">{{categoria.name}}</h1>
+    <h1 class="subtitulo">{{categoria.title}}</h1>
+</div>
+<div class="detalle">
+    <img [src]="categoria.image" alt="">
+    <p>{{categoria.text}}</p>
+    <button (click)="regresar()">VOLVER</button>
+</div>
+<footer>
+    <app-footer></app-footer>
+</footer>

@@ -15,7 +15,7 @@ import { ArtesanosComponent } from './components/artesanos/artesanos.component';
 import { MuestraUnoComponent } from './components/muestra-uno/muestra-uno.component';
 import { MuestraDosComponent } from './components/muestra-dos/muestra-dos.component';
 import { MuestraTresComponent } from './components/muestra-tres/muestra-tres.component';
-import { ArtesanoComponent } from './components/artesano/artesano.component';
+import { CategoriaComponent } from './components/categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { ArtesanoComponent } from './components/artesano/artesano.component';
     MuestraUnoComponent,
     MuestraDosComponent,
     MuestraTresComponent,
-    ArtesanoComponent
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

@@ -16,11 +16,11 @@ export class MuestraTresComponent {
   ) { }
 
   ngOnInit() {
-    this.listaArtesanos = this.generalService.listarArtesanos();
+    this.listaArtesanos = this.generalService.listarCategorias();
   }
 
   verDetalle(id: any){
-    this.router.navigateByUrl(`/artesano/${id}`);
+    this.router.navigateByUrl(`/categoria/${id}`);
   }
 
 }

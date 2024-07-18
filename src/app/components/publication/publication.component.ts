@@ -105,6 +105,8 @@ export class PublicationComponent {
       this.formPublicacion.controls.photoFile.value = archivoCapturado;
       this.extraerBase64(archivoCapturado).then((imagen: any)=>{
         this.previsualizador = imagen.base;
+        console.log(this.previsualizador);
+        
       })
     }else{
       console.log('error');
